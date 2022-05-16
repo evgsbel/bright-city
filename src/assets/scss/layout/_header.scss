@@ -1,0 +1,38 @@
+.header {
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: 15;
+  height: 105px;
+  width: 100%;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  &__left {
+    align-items: center;
+    @include r(600) {
+      display: none;
+    }
+  }
+  &__link  {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration: underline;
+    color: #fff;
+    @include r(768) {
+      display: block;
+      margin-right: 20px;
+    }
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  &__btn {
+    display: block;
+    margin-left: auto;
+    padding: 12px 60px;
+    color: #fff;
+    border: 1px solid currentColor;
+
+  }
+}

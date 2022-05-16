@@ -1,0 +1,28 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="{{root}}assets/img/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>{{title}}</title>
+    <!-- build:css -->
+  <link rel="stylesheet" href="{{root}}assets/vendor/css/ion.rangeSlider.min.css">
+		<link rel="stylesheet" href="{{root}}assets/css/main.css">
+		<!-- endbuild -->
+    <link rel="stylesheet" href="{{root}}assets/css/rtl.css">
+</head>
+
+<body class="is-{{page}}-page">
+    {{> header}}
+    <main role="main" class="main">
+        {{> body}}
+    </main>
+    <div class="js-stop-header"></div>
+    {{> footer}}
+    {{> scripts}}
+</body>
+
+</html>

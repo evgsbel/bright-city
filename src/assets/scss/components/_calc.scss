@@ -1,0 +1,148 @@
+.calc {
+  position: relative;
+  z-index: 10;
+  padding: 41px 60px;
+  background: #FFFFFF;
+  box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+
+  @include r(1280) {
+    padding-left: 15px;
+  }
+  @include r(960) {
+    background-color: transparent;
+  }
+
+  &__title {
+    margin-bottom: 27px;
+    font-weight: 300;
+    font-size: 37px;
+    line-height: 59px;
+    color: #000;
+    @include r(1280) {
+      font-size: 28px;
+    }
+    span {
+      display: block;
+      font-weight: 900;
+      font-size: 59px;
+      line-height: 59px;
+      color: #FFA800;
+      @include r(1280) {
+        font-size: 45px;
+      }
+    }
+  }
+  &__subtitle {
+    margin-bottom: 40px;
+    padding-bottom: 36px;
+    font-size: 26px;
+    line-height: 29px;
+    color: #000;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    @include r(1280) {
+      font-size: 18px;
+    }
+  }
+  &__result {
+    margin-bottom: 20px;
+    padding: 0 20px;
+    li {
+      display: flex;
+      justify-content: space-between;
+      line-height: 35px;
+      color: #000;
+      span {
+        display: inline-block;
+        margin-left: auto;
+      }
+    }
+  }
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 17px;
+    color: #FFA800;
+  }
+  &__sum {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+  }
+  &__btn {
+    display: block;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+  }
+  &__form {
+    margin-bottom: 30px;
+  }
+}
+
+
+.range {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .irs--round::before,
+  .irs--round::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    display: block;
+    height: 16px;
+    width: 1px;
+    background-color: #C4C4C4;
+  }
+  .irs--round::before {
+    left: 2px;
+  }
+  .irs--round::after {
+    right: 2px;
+  }
+  .irs--round .irs-bar {
+    top: 24px;
+    height: 4px;
+    background-color: #FFA800;
+  }
+  .irs--round .irs-line {
+    top: 24px;
+    height: 4px;
+    background-color: #C4C4C4;
+  }
+  .irs--round .irs-handle {
+    top: 15px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    background-color: #FFA800;
+    &:hover,
+    &:active {
+      background-color: #e3a42a;
+      -webkit-box-shadow: 0 0 15px #FFA800;
+      box-shadow: 0 0 15px #FFA800;
+    }
+  }
+  &__caption {
+    color: #000;
+    &_big {
+      font-size: 20px;
+      line-height: 23px;
+    }
+    &_sm {
+      font-weight: 700;
+      line-height: 19px;
+    }
+  }
+  &__subtitle {
+    line-height: 19px;
+    color: #A5A5A5;
+  }
+  &__wr {
+    margin-top: 7px;
+  }
+}

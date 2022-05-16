@@ -1,0 +1,112 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+html,
+body,
+main {
+  margin: 0;
+}
+
+body {
+  background-color: #fff;
+  &.opened-menu {
+    overflow: hidden;
+  }
+  @include r(600) {
+    padding-top: 0 !important;
+  }
+}
+
+.container {
+  @include r(1280) {
+    padding: 0 30px;
+  }
+  @include r(480) {
+    padding: 0 15px;
+  }
+}
+
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn-reset {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+  &_h-center {
+    align-items: center;
+  }
+  &_w-center {
+    justify-content: center;
+  }
+  &_all-center{
+    align-items: center;
+    justify-content: center;
+  }
+  &_all-sb {
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  &__icon  {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 auto;
+  }
+  &__text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    text-transform: uppercase;
+    color: #FFA800;
+    span {
+      font-weight: 300;
+      color: #fff;
+    }
+  }
+}
+
+
+
