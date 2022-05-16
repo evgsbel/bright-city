@@ -8,6 +8,9 @@
   &__title {
     color: #fff;
     text-align: center;
+    @include r(960) {
+      font-size: 38px;
+    }
   }
   &__subtitle {
     margin-bottom: 64px;
@@ -16,6 +19,9 @@
     line-height: 50px;
     text-align: center;
     color: #fff;
+    @include r(960) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -65,9 +71,16 @@
     @include r(1024) {
       gap: 0;
     }
+    @include r(960) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
   &__icon {
     margin-left: -15px;
+    @include r(960) {
+      margin: 0;
+    }
   }
   &__caption {
     font-weight: 300;
@@ -89,6 +102,9 @@
     }
     @include r(1200) {
       padding: 0;
+    }
+    @include r(768) {
+      text-align: center;
     }
   }
   &__btn {
@@ -126,13 +142,17 @@
       background-repeat: no-repeat;
       background-position: left bottom;
       background-size: contain;
+      @include r(768) {
+        left: 0;
+        max-width: 100%;
+      }
     }
-  }
-  @include r(960) {
-    padding-bottom: 80px;
   }
   &__title {
     color: #1C1C1C;
+    @include r(960) {
+      text-align: center;
+    }
   }
   &__subtitle {
     margin-bottom: 50px;
@@ -140,6 +160,9 @@
     font-size: 28px;
     line-height: 45px;
     color: #1C1C1C;
+    @include r(960) {
+      text-align: center;
+    }
   }
 
   &__item {
@@ -173,7 +196,6 @@
     color: #545454;
     @include r(960) {
       font-weight: 300;
-      color: rgba(255,255,255,0.7);
     }
   }
   &__img {
@@ -204,6 +226,9 @@
     line-height: 45px;
     text-align: center;
     color: #1C1C1C;
+    @include r(1024) {
+      font-size: 24px;
+    }
   }
   &__form {
     margin: 0 auto;
@@ -214,6 +239,13 @@
     box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
   }
+  &__label {
+    margin-bottom: 20px;
+    @include r(576) {
+      width: 100%;
+      text-align: center;
+    }
+  }
   &__input {
     margin-right: 20px;
     padding: 11px 10px 11px 20px;
@@ -223,6 +255,10 @@
     color: #A5A5A5;
     border: 1px solid #C4C4C4;
     border-radius: 5px;
+    @include r(576) {
+      margin-right: 0;
+      max-width: 100%;
+    }
     &::placeholder {
       font-size: 18px;
       line-height: 21px;
@@ -231,6 +267,10 @@
   }
   &__btn {
     padding: 13px 72px;
+    @include r(576) {
+      display: block;
+      margin: 0 auto 20px;
+    }
   }
   &__personal {
     line-height: 38px;
@@ -258,10 +298,20 @@
     justify-content: center;
     gap: 0 60px;
     width: 100%;
+    @include r(768) {
+      gap: 20px;
+    }
+    @include r(576) {
+      flex-wrap: wrap;
+    }
   }
   &__item {
     gap: 20px;
     align-items: center;
+    @include r(576) {
+      width: 100%;
+      justify-content: center;
+    }
   }
   &__icon {
     width: 23px;

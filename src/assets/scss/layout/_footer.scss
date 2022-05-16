@@ -6,7 +6,7 @@
     padding: 12px 60px;
     margin-left: auto;
     margin-bottom: 34px;
-    @include r(480) {
+    @include r(576) {
       margin-left: 0;
       margin-top: 30px;
     }

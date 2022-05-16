@@ -5,19 +5,36 @@
   background: #FFFFFF;
   box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
+  @include r(576) {
+    padding: 20px;
+  }
   &__form {
     display: flex;
     justify-content: space-between;
+    @include r(768) {
+      flex-wrap: wrap;
+    }
+
   }
   &__left {
     width: 63%;
     flex-basis: 63%;
     padding-right: 35px;
-    border-right: 2px dotted #C4C4C4;;
+    border-right: 2px dotted #C4C4C4;
+    @include r(768) {
+      padding-right: 0;
+      width: 100%;
+      flex-basis: 100%;
+      border: none;
+    }
   }
   &__right {
     width: 33%;
     flex-basis: 33%;
+    @include r(768) {
+      width: 100%;
+      flex-basis: 100%;
+    }
   }
   &__result {
     margin-bottom: 14px;
@@ -49,6 +66,14 @@
     padding: 18px;
     width: 100%;
     text-align: center;
+    @include r(768) {
+      display: block;
+      width: 50%;
+      margin: 0 auto;
+    }
+    @include r(480) {
+      width: 100%;
+    }
   }
 }
 
