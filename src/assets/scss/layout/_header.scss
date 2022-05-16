@@ -1,11 +1,7 @@
 .header {
-  position: absolute;
-  top:0;
-  left: 0;
-  z-index: 15;
-  height: 105px;
+  height: 100px;
   width: 100%;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  background-color: #1C1C1C;
   &__left {
     align-items: center;
     @include r(600) {
@@ -32,7 +28,5 @@
     margin-left: auto;
     padding: 12px 60px;
     color: #fff;
-    border: 1px solid currentColor;
-
   }
 }

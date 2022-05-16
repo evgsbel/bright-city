@@ -1,65 +1,20 @@
 .hero {
   position: relative;
-  padding-top: 105px;
+  padding: 70px 0;
   background-image: url(../img/hero-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
-  .container {
-    position: relative;
-  }
-  &__list {
-    padding-top: 150px;
-    @include r(1024) {
-      padding-top: 50px;
-    }
-    @include r(960) {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    @include r(768) {
-      margin-bottom: 50px;
-    }
-  }
-  &__item {
-    gap: 53px;
-    @include r(1024) {
-      gap: 20px;
-    }
-    &:not(:last-child) {
-      margin-bottom: 90px;
-    }
-  }
-  &__icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 0 0 auto;
-    width: 56px;
-    height: 56px;
-    border: 1px solid #FFA800;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-  }
-  &__caption {
-    margin-bottom: 10px;
-    font-size: 40px;
-    line-height: 45px;
+  &__title {
     color: #fff;
-    transition: color .3s ease-in-out;
-    @include r(1280) {
-      font-size: 30px;
-    }
-    &:hover {
-      color: #FFA800;
-    }
+    text-align: center;
   }
-  &__subcaption {
+  &__subtitle {
+    margin-bottom: 64px;
     font-weight: 300;
-    font-size: 20px;
-    line-height: 29px;
+    font-size: 28px;
+    line-height: 50px;
+    text-align: center;
     color: #fff;
   }
 }
@@ -67,17 +22,13 @@
 
 
 .how {
-  background-color: #1C1C1C;
-  .container {
-    padding: 130px 15px;
-    background-color: #F7F7F7;
-  }
+  padding: 52px 0 60px;
+  background-color: #F7F7F7;
   &__title {
     text-align: center;
   }
   &__subtitle {
     margin-bottom: 60px;
-    padding-bottom: 45px;
     font-weight: 300;
     font-size: 20px;
     line-height: 45px;
@@ -86,14 +37,14 @@
   &__list {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 33px;
+    gap: 38px;
+    margin-bottom: 62px;
     @include r(768) {
       flex-wrap: wrap;
     }
   }
   &__item {
-    text-align: center;
-    flex: 0 0 25%;
+    flex: 0 0 33%;
     @include r(960) {
       flex-basis: 30%;
     }
@@ -101,16 +52,32 @@
       flex-basis: 100%;
     }
   }
+  &__heading {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-bottom: 22px;
+    padding-top: 10px;
+    background-color: #fff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    overflow-x: hidden;
+    border-radius: 5px;
+  }
   &__icon {
-    margin-bottom: 15px;
+    margin-left: -15px;
   }
   &__caption {
-    margin-bottom: 8px;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 45px;
+    color: #1C1C1C;
   }
   &__description {
+    padding-left: 120px;
+    padding-right: 64px;
     font-size: 20px;
     line-height: 30px;
-    color: #563900;
+    color: #545454;
   }
   &__btn {
     display: block;
@@ -129,26 +96,25 @@
 }
 
 .advantages {
+  padding: 80px 0 60px;
   background-color: #fff;
+  .container {
+    background-image: url('../img/adv-bg-2.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
   @include r(960) {
     padding-bottom: 80px;
   }
-  .container {
-    padding-top: 80px;
-    background-color: #1C1C1C;
-    @include r(960) {
-      background-color: transparent;
-    }
-  }
   &__title {
-    color: #fff;
+    color: #1C1C1C;
   }
   &__subtitle {
     margin-bottom: 50px;
     font-weight: 300;
     font-size: 28px;
     line-height: 45px;
-    color: #fff;
+    color: #1C1C1C;
   }
 
   &__item {
@@ -173,7 +139,7 @@
     border-radius: 10px;
   }
   &__caption {
-    color: #fff;
+    color: #1C1C1C;
     margin-bottom: 10px;
   }
   &__description {
