@@ -20,6 +20,7 @@ $(document).ready(function() {
 
 // calc
 
+
 $(() => {
 
   let $moneyBlock = $('.js-range-value'),
@@ -63,6 +64,7 @@ $(() => {
     max: 50000,
     from: 15000,
     step: 500,
+    postfix: ' руб.',
     force_edges: true,
     hide_min_max: true,
     onStart: function(data) {
@@ -77,14 +79,12 @@ $(() => {
     }
   });
 
-
   $timeRange.ionRangeSlider({
     skin: "round",
     min: 1,
     max: 30,
     from: 10,
     step: 1,
-    postfix: " дней",
     force_edges: true,
     prettify_enabled: false,
     hide_min_max: true,
@@ -96,7 +96,7 @@ $(() => {
         twoDigitMonth = ((fullDate.getMonth().toString().length) == 1) ? '0' + (fullDate.getMonth() + 1) : (fullDate.getMonth() + 1),
         twoDigitDate = ((fullDate.getDate().toString().length) == 1) ? '0' + (fullDate.getDate()) : (fullDate.getDate()),
         currentDate = twoDigitDate + "." + twoDigitMonth + "." + fullDate.getFullYear();
-      $dateBlock.html(currentDate)
+        $dateBlock.html(currentDate)
       // let
       //   x = parseFloat($moneyBlock.text()),
       //   i = data.from,
@@ -114,6 +114,7 @@ $(() => {
       $timeBlock.text(data.from);
       dayVal = declOfNum(data.from, ['день', 'дня', 'дней'])
       $day_ref.text(dayVal)
+      $('.range_time .irs-single').append(' ' + dayVal)
       console.log(m)
       let m = parseFloat($hiddenInput.val())
       let r = Math.round( parseFloat($hiddenInput.val())+ (data.from * parseFloat($hiddenInput.val()) / 100))
@@ -128,3 +129,7 @@ $(() => {
 //masked inputs
 
 Inputmask({"mask": "+7 (999) 999-99-99"}).mask('.phone-mask');
+
+$(document).ready(function () {
+  $('.range_time .irs-single').append(' дней')
+})

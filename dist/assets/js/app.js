@@ -80,6 +80,7 @@ $(function () {
     max: 50000,
     from: 15000,
     step: 500,
+    postfix: ' руб.',
     force_edges: true,
     hide_min_max: true,
     onStart: function onStart(data) {
@@ -99,7 +100,6 @@ $(function () {
     max: 30,
     from: 10,
     step: 1,
-    postfix: " дней",
     force_edges: true,
     prettify_enabled: false,
     hide_min_max: true,
@@ -124,6 +124,7 @@ $(function () {
       $timeBlock.text(data.from);
       dayVal = declOfNum(data.from, ['день', 'дня', 'дней']);
       $day_ref.text(dayVal);
+      $('.range_time .irs-single').append(' ' + dayVal);
       console.log(m);
       var m = parseFloat($hiddenInput.val());
       var r = Math.round(parseFloat($hiddenInput.val()) + data.from * parseFloat($hiddenInput.val()) / 100);
@@ -135,3 +136,6 @@ $(function () {
 Inputmask({
   "mask": "+7 (999) 999-99-99"
 }).mask('.phone-mask');
+$(document).ready(function () {
+  $('.range_time .irs-single').append(' дней');
+});

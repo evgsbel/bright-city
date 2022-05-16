@@ -44,7 +44,7 @@
     }
   }
   &__item {
-    flex: 0 0 33%;
+    flex: 0 1 33%;
     @include r(960) {
       flex-basis: 30%;
     }
@@ -62,6 +62,9 @@
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     overflow-x: hidden;
     border-radius: 5px;
+    @include r(1024) {
+      gap: 0;
+    }
   }
   &__icon {
     margin-left: -15px;
@@ -71,6 +74,9 @@
     font-size: 28px;
     line-height: 45px;
     color: #1C1C1C;
+    @include r(1200) {
+      font-size: 22px;
+    }
   }
   &__description {
     padding-left: 120px;
@@ -78,6 +84,12 @@
     font-size: 20px;
     line-height: 30px;
     color: #545454;
+    @include r(1200) {
+      padding-left: 30px;
+    }
+    @include r(1200) {
+      padding: 0;
+    }
   }
   &__btn {
     display: block;
@@ -100,10 +112,13 @@
   background-color: #fff;
   .container {
     position: relative;
+    @include r(1024) {
+      padding-bottom: 50px;
+    }
     &::before {
       content: '';
       position: absolute;
-      left: -160px;
+      left: -130px;
       bottom: 0;
       width: 678px;
       height: 632px;
@@ -162,6 +177,11 @@
     }
   }
   &__img {
+    @include r(1024) {
+      position: absolute;
+      left: 0;
+      bottom: -50px;
+    }
     @include r(960) {
       display: none;
     }
