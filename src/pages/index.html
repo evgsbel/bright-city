@@ -99,8 +99,8 @@ title: Home Page
 <section class="advantages" id="advantages">
   <div class="container">
     <div class="row">
-      <div class="col-lg-5">
-        <img class="advantages__img" src="assets/img/adv-bg.png" alt="">
+      <div class="col-lg-5 advantages__img">
+        <img class="" src="assets/img/adv-bg.png" alt="">
       </div>
       <div class="col-lg-7">
         <h2 class="title-h2 advantages__title">Наши преимущества</h2>
@@ -141,35 +141,52 @@ title: Home Page
     </div>
   </div>
 </section>
+<section class="feedback">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="title-h2 feedback__title">Заполните короткую форму</h2>
+        <p class="feedback__subtitle">Автоматическая обработка без визита в офис. Деньги уже через 10 минут!</p>
+        <form action="" class="feedback__form">
+          <label for="input-phone" class="feedback__label">
+            <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" class="feedback__input phone-mask" id="input-phone">
+          </label>
+          <button class="btn-reset btn btn_yellow feedback__btn">Далее</button>
+          <p class="feedback__personal">Нажимая на кнопку “Далее”, я соглашаюсь
+            с правилами обработки персональных и других данных. <a href="/">Подробнее</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="contacts">
   <div class="container">
     <div class="row">
-      <div class="hero-contacts hero__contacts">
-        <div class="container offset-lg-1 p-sm-0">
-          <h2 class="title-h2 hero-contacts__title">Контакты</h2>
-          <ul class="hero-contacts__list">
-            <li class="hero-contacts__item flex">
-              <svg class="hero-contacts__icon">
-                <use xlink:href="assets/img/sprite.svg#hc-icon-1"></use>
-              </svg>
-              <a href="tel:+78461234567" class="hero-contacts__link">+7 (846) 123 45 67</a>
-            </li>
-            <li class="hero-contacts__item flex">
-              <svg class="hero-contacts__icon">
-                <use xlink:href="assets/img/sprite.svg#hc-icon-2"></use>
-              </svg>
-              <a href="tel:+78461234567" class="hero-contacts__link">+7 (846) 123 45 67</a>
-            </li>
-            <li class="hero-contacts__item flex">
-              <svg class="hero-contacts__icon">
-                <use xlink:href="assets/img/sprite.svg#hc-icon-3"></use>
-              </svg>
-              <a href="mailto:fastzaym@mail.ru" class="hero-contacts__link">fastzaym@mail.ru</a>
-            </li>
-          </ul>
-        </div>
+      <div class="col-12">
+        <h2 class="title-h2 contacts__title">Контакты</h2>
+        <ul class="contacts__list">
+          <li class="contacts__item flex">
+            <svg class="contacts__icon">
+              <use xlink:href="assets/img/sprite.svg#hc-icon-1"></use>
+            </svg>
+            <a href="tel:+78461234567" class="contacts__link">+7 (846) 123 45 67</a>
+          </li>
+          <li class="contacts__item flex">
+            <svg class="contacts__icon">
+              <use xlink:href="assets/img/sprite.svg#hc-icon-2"></use>
+            </svg>
+            <a href="tel:+78461234567" class="contacts__link">+7 (846) 123 45 67</a>
+          </li>
+          <li class="contacts__item flex">
+            <svg class="contacts__icon">
+              <use xlink:href="assets/img/sprite.svg#hc-icon-3"></use>
+            </svg>
+            <a href="mailto:fastzaym@mail.ru" class="contacts__link">fastzaym@mail.ru</a>
+          </li>
+        </ul>
       </div>
     </div>
+  </div>
   </div>
 </section>
 

@@ -81,8 +81,6 @@ $(function () {
     from: 15000,
     step: 500,
     force_edges: true,
-    prettify_enabled: false,
-    hide_from_to: true,
     hide_min_max: true,
     onStart: function onStart(data) {
       $hiddenInput.val(data.from);
@@ -101,9 +99,9 @@ $(function () {
     max: 30,
     from: 10,
     step: 1,
+    postfix: " дней",
     force_edges: true,
     prettify_enabled: false,
-    hide_from_to: true,
     hide_min_max: true,
     onChange: function onChange(data) {
       var fullDate = new Date();
@@ -132,4 +130,8 @@ $(function () {
       $moneyRefundBlock.text(r + ' ₽');
     }
   });
-});
+}); //masked inputs
+
+Inputmask({
+  "mask": "+7 (999) 999-99-99"
+}).mask('.phone-mask');

@@ -120,6 +120,7 @@ function jsVendor() {
       'node_modules/bootstrap/dist/js/bootstrap.js',
       'node_modules/ion-rangeslider/js/ion.rangeSlider.min.js',
       'node_modules/swiper/swiper-bundle.js',
+      'node_modules/inputmask/dist/inputmask.min.js',
     ])
     .pipe(dest('dist/assets/vendor/js'))
     .pipe(browserSync.stream());
@@ -301,6 +302,7 @@ function concatScripts() {
       'dist/assets/vendor/js/bootstrap.js',
       'dist/assets/vendor/js/ion.rangeSlider.min.js',
       'dist/assets/vendor/js/swiper-bundle.js',
+      'dist/assets/vendor/js/inputmask.min.js',
       'src/assets/js/util/*',
       'src/assets/js/*'
     ])
